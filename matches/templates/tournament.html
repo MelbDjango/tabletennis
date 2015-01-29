@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Tournament</title>
+  </head>
+  <body>
+    <h1>{{ tournament.name }}</h1>
+
+    <h2>Players</h2>
+    <ul>
+      {% for player in tournament.players.all %}
+      <li>{{ player.name }}</li>
+      {% endfor %}
+    </ul>
+    
+    <hr>
+
+    <h2>Matches</h2>
+    <ul>
+      {% for match in tournament.match_set.all %}
+      <li>{{ match }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
